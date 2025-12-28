@@ -1,73 +1,58 @@
-# React + TypeScript + Vite
+# AI Engineering Portfolio - Augusto César
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o código-fonte do meu portfólio profissional, focado em soluções de **Engenharia de Inteligência Artificial**, **Sistemas Inteligentes** e **Arquitetura Cloud**.
 
-Currently, two official plugins are available:
+O projeto foi construído seguindo princípios de **Clean Architecture** e **Modularização**, garantindo escalabilidade e facilidade de manutenção.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tecnologias Utilizadas
 
-## React Compiler
+- **Frontend:** React 19, TypeScript, Tailwind CSS 4.
+- **Ícones:** Lucide React.
+- **Build Tool:** Vite.
+- **Arquitetura:** Context API para Gerenciamento de Estado (Multi-idioma), Componentização Atômica.
+- **Deploy:** GitHub Pages.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Estrutura do Projeto
 
-## Expanding the ESLint configuration
+A arquitetura foi refatorada para separar as preocupações de dados e interface:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- `/src/components`: Componentes visuais reutilizáveis (Cards, Header, Hero).
+- `/src/contexts`: Gerenciamento de estado global (idioma PT/EN).
+- `/src/data`: "Fonte única de verdade" para todos os textos e dados dos projetos.
+- `/src/assets`: Recursos de mídia (imagens e ícones).
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## 🌟 Projetos em Destaque
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Alguns dos projetos listados no portfólio incluem:
+- **API de Extração Inteligente de Notas Fiscais:** Serverless com AWS Lambda e Amazon Textract.
+- **Chatbot RAG Jurídico:** Orquestração com LangChain e AWS Bedrock (Amazon Titan).
+- **Zaia Agent:** Agente ReAct Fullstack com Gemini 2.0 Flash.
+- **DreamSquad AI:** API de agentes utilizando Clean Architecture e Ollama.
+- **IaC com Terraform:** Provisionamento modular na Oracle Cloud Infrastructure (OCI).
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## ⚙️ Como executar localmente
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/augustocsar/portfolio.git
+   ```
+
+Instale as dependências:
+
+```bash
+npm install
 ```
+Inicie o servidor de desenvolvimento:
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+📦 Deploy
+O deploy é realizado automaticamente via gh-pages. Para publicar alterações:
+
+```bash
+npm run deploy
+```
+Documentação técnica desenvolvida por Augusto César.
+
+
